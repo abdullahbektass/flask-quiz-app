@@ -21,7 +21,7 @@ Flask Quiz App is a web-based application that allows users to sign up, log in, 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/flask-quiz-app.git
+   git clone https://github.com/abdullahbektass/flask-quiz-app.git
    cd flask-quiz-app
    ```
 
