@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Signup</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f9f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        background-color: #ffffff;
+        padding: 20px 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        color: #333333;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #555555;
+        text-align: left;
+      }
+
+      input[type='text'],
+      input[type='email'],
+      input[type='password'] {
+        margin-bottom: 15px;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        outline: none;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      input[type='text']:focus,
+      input[type='email']:focus,
+      input[type='password']:focus {
+        border-color: #28a745;
+        box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+      }
+
+      button {
+        background-color: #28a745;
+        color: #ffffff;
+        padding: 10px 15px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #218838;
+      }
+
+      .login-link {
+        margin-top: 15px;
+      }
+
+      .login-link a {
+        color: #28a745;
+        text-decoration: none;
+      }
+
+      .login-link a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Signup</h1>
+      <form action="{{ url_for('main.signup') }}" method="POST">
+        <label for="fullname">Full Name:</label>
+        <input type="text" name="fullname" id="fullname" required />
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required />
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required />
+        <button type="submit">Sign up</button>
+      </form>
+      <div class="login-link">
+        <p>Already have an account? <a href="/login">Log in</a></p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block title %}Quiz- Quiz App{% endblock %} {% block content %}
+<h2>Questions</h2>
+<form action="{{ url_for('main.score') }}" method="POST">
+  {% for question in questions %}
+  <div class="question-block">
+    <p><strong>Question {{ loop.index }}:</strong> {{ question.text }}</p>
+    <div class="answers">
+      {% for answer in question.answers %}
+      <div>
+        <input
+          type="radio"
+          name="question_{{ question._id }}"
+          value="{{ loop.index }}"
+          id="q{{ question._id }}a{{ loop.index }}"
+          required
+        />
+        <label for="q{{ question._id }}a{{ loop.index }}">{{ answer }}</label>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+  <button type="submit">Submit Answers</button>
+</form>
+{% endblock %}

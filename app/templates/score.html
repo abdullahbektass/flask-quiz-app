@@ -1,0 +1,8 @@
+{% extends "base.html" %} {% block title %}Score - Quiz App{% endblock %} {% block content %}
+<h1>Quiz Result</h1>
+<p>Your score is <strong>{{ score }}</strong> out of {{ total_questions }}.</p>
+{% if is_high_score %}
+<p class="high-score">Congratulations! This is your new high score!</p>
+{% endif %}
+<button onclick="window.location.href='/'">Go to Homepage</button>
+{% endblock %}
