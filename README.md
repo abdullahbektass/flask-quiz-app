@@ -38,7 +38,7 @@ Flask Quiz App is a web-based application that allows users to sign up, log in, 
    pip install -r requirements.txt
    ```
 
-4. Set up your MongoDB instance and update the MongoDB URI in your configuration file.
+4. Set up your MongoDB instance and update the MONGO_URI and SECRET_KEY in your configuration file.
 
 5. Run the application:
 
